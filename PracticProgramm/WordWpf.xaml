@@ -1,0 +1,16 @@
+﻿<Window x:Class="PracticProgramm.WordWpf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticProgramm"
+        mc:Ignorable="d"
+        Title="WordWpf" Height="450" Width="400">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,32,0,0" TextWrapping="Wrap" Text="напишите нзвание машины или название компонента" VerticalAlignment="Top" Height="24" Width="313"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,61,0,0" TextWrapping="Wrap" x:Name="TextName" VerticalAlignment="Top" Width="120" />
+        <Button Content="Создать Документ" x:Name="AddWord" Click="AddWord_Click" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Height="22" Width="109"/>
+        <Button Content="Назад" x:Name="Back" Click="Back_Click" HorizontalAlignment="Left" Margin="156,162,0,0" VerticalAlignment="Top" Width="70" Height="22"/>
+
+    </Grid>
+</Window>

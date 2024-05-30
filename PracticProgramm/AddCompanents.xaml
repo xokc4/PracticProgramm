@@ -1,0 +1,27 @@
+﻿<Window x:Class="PracticProgramm.AddCompanents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticProgramm"
+        mc:Ignorable="d"
+        Title="AddCompanents" Height="450" Width="400">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="230,33,0,0" TextWrapping="Wrap" x:Name="NameCompanents" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,33,0,0" TextWrapping="Wrap" Text="названия компанента для добавления" VerticalAlignment="Top" Width="233" Height="18"/>
+        <Button Content="Добавить" x:Name="Add"  Click="Add_Click" HorizontalAlignment="Left" Margin="10,327,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button Content="назад" x:Name="Back" Click="Back_Click" HorizontalAlignment="Left" Margin="126,327,0,0" VerticalAlignment="Top" Height="20" Width="60"/>
+        <CheckBox Content="Будет ли компонент вложенный или нет" x:Name="isNestedCheckBox" HorizontalAlignment="Left" Margin="11,152,0,0" VerticalAlignment="Top" Width="248"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="названия машины для двигателя" VerticalAlignment="Top" Width="212"/>
+
+
+        <TextBox HorizontalAlignment="Left" Margin="230,65,0,0" TextWrapping="Wrap" x:Name="engineNameTextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,99,0,0" TextWrapping="Wrap" Text="количество компонентов" VerticalAlignment="Top" Width="199"/>
+        <TextBox HorizontalAlignment="Left" Margin="230,94,0,0" TextWrapping="Wrap" x:Name="ComponentCount" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="230,243,0,0" TextWrapping="Wrap" x:Name="NameCompanentsElements" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,245,0,0" TextWrapping="Wrap" Text="Имя комопонента" VerticalAlignment="Top" Width="146"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,224,0,0" TextWrapping="Wrap" Text="Данные для элемента:" VerticalAlignment="Top" Width="145"/>
+
+    </Grid>
+</Window>
