@@ -3,6 +3,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -45,6 +46,11 @@ namespace PracticProgramm
         /// <returns></returns>
         public  ConnectionData LoadFromFile()
         {
+            if (!File.Exists(path))
+            {
+               File.Create(path);
+                return null;
+            }
             try
             {
                 string[] lines = File.ReadAllLines(path);
@@ -76,6 +82,11 @@ namespace PracticProgramm
         /// <param name="Password"></param>
         public void SaveToFile(string Server, string Database, string UserId, string Password)
         {
+            if (!File.Exists(path))
+            {
+                File.Create(path);
+                return;
+            }
             try
             {
                 using (StreamWriter writer = new StreamWriter(path))
@@ -102,5 +113,21 @@ namespace PracticProgramm
         {
             return $"Server={ServerName};Database={DatabaseName};User ID={UserName};password={Password};Trusted_Connection=True;TrustServerCertificate=True;";
         }
+        //public void SetConnect()
+        //{
+        //    try
+        //    {
+        //        using (SqlConnection connection = new SqlConnection(StringsPath()))
+        //        {
+        //            connection.Open();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"в вашем файле нет данных для подключения к бд");
+        //        return;
+        //    }
+
+        //}
     }
 }
