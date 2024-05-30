@@ -48,7 +48,7 @@ namespace PracticProgramm
         {
             if (!File.Exists(path))
             {
-               File.Create(path);
+               File.Create(path).Close();
                 return null;
             }
             try
@@ -84,7 +84,7 @@ namespace PracticProgramm
         {
             if (!File.Exists(path))
             {
-                File.Create(path);
+                File.Create(path).Close();
                 return;
             }
             try

@@ -34,7 +34,7 @@ namespace PracticProgramm
         {
             
             connection = connection.LoadFromFile();
-            //connection.SetConnect();
+            
             if (connection == null)
             {
                 MessageBox.Show("Нужно написать данные для подключения бд в окне, и нажать на подключение");
